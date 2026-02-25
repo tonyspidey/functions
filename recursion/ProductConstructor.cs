@@ -14,6 +14,24 @@ class Product
         price =  0;
     }
 
+    public Product(string n, int c, int q, double p)
+    {
+        name = n;
+        code = c;
+        quantity = q;
+        price = p;
+    }
+
+    public Product(Product p)
+    {
+        name = p.name;
+        code = p.code;
+        quantity = p.quantity;
+        price = p.price;
+        total = p.total;
+        da = p.da;
+        fp = p.fp;
+    }
     public void SetData(string n, int c, int q, double p)
     {
         name = n;
@@ -47,6 +65,10 @@ class ProductConstructor
         int code,quantity;
         double price;
 
+        Product p = new Product();
+        Product p2 = new Product("Laptop", 102, 1, 10000);
+        Product p3 = new Product(p2);
+
         Console.WriteLine("enter the product code :");
         code = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("enter the product Quantity :");
@@ -56,15 +78,16 @@ class ProductConstructor
         Console.WriteLine("enter the product Price :");
         price = Convert.ToDouble(Console.ReadLine());
 
-        Product p= new Product();
+     
         p.SetData(name, code, quantity, price);
         p.Calculate();
         p.Display();
 
-        Product p2= new Product();
-        p2.SetData("laptop", 056, 1, 10000);
         p2.Calculate();
         p2.Display();
+
+        p3.Calculate();
+        p3.Display();
 
     }
 }
