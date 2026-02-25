@@ -1,0 +1,70 @@
+﻿//CALCULATE FINAL PRICE FOR THE PRODUCT 
+
+using System;
+class Product
+{
+    public string name;
+    public int code, quantity;
+    public double price, total, da, fp;
+
+    public Product()
+    {
+        name = " ";
+        code = quantity = 0;
+        price =  0;
+    }
+
+    public void SetData(string n, int c, int q, double p)
+    {
+        name = n;
+        code = c;
+        quantity = q;
+        price = p;
+    }
+    public void Calculate()
+    {
+        total = quantity * price;
+        da = total * 0.10;
+        fp = total - da;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("the product code is :" + code);
+        Console.WriteLine("the product name is :" + name);
+        Console.WriteLine("the product quantity is :" + quantity);
+        Console.WriteLine("the product price is :" + price);
+        Console.WriteLine("the product Discount amount is :" + da);
+        Console.WriteLine("the product final price is :" + fp);
+    }
+}
+
+class ProductConstructor
+{
+    static void Main(string[] args)
+    {
+        string name;
+        int code,quantity;
+        double price;
+
+        Console.WriteLine("enter the product code :");
+        code = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter the product Quantity :");
+        quantity = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter the product Name :");
+        name = Console.ReadLine();
+        Console.WriteLine("enter the product Price :");
+        price = Convert.ToDouble(Console.ReadLine());
+
+        Product p= new Product();
+        p.SetData(name, code, quantity, price);
+        p.Calculate();
+        p.Display();
+
+        Product p2= new Product();
+        p2.SetData("laptop", 056, 1, 10000);
+        p2.Calculate();
+        p2.Display();
+
+    }
+}
