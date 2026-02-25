@@ -15,6 +15,28 @@ class Student
         avg = 0;
     }
 
+    public Student(string n, int a, int b, int c, int d, int e)
+    {
+        name = n;
+        m1 = a;
+        m2 = b;
+        m3 = c;
+        m4 = d;
+        m5 = e;
+    }
+
+    public Student(Student s)
+    {
+        name = s.name;
+        m1 = s.m1;
+        m2 = s.m2;
+        m3 = s.m3;
+        m4 = s.m4;
+        m5 = s.m5;
+        total = s.total;
+        avg = s.avg;
+    }
+
     public void SetData(string n,int a, int b, int c, int d, int e)
     {
         name = n;
@@ -45,7 +67,9 @@ class Constructorpgm
         string name;
         int m1, m2, m3, m4, m5;
 
-
+        Student s1 = new Student();
+        Student s2 = new Student("Adi", 60, 70, 80, 90, 99);
+        Student s3 = new Student(s2);
 
         Console.WriteLine("Enter the name of the student:");
         name = Console.ReadLine();
@@ -60,17 +84,15 @@ class Constructorpgm
         Console.WriteLine("enter the mark5:");
         m5 = Convert.ToInt32(Console.ReadLine());
 
-        Student s1= new Student();
-
         s1.SetData(name, m1, m2, m3, m4, m5);
         s1.Calculate();
         s1.Display();
 
-        Student s2 = new Student();
-        s2.SetData("Adi", 60,70,80,90,99);
         s2.Calculate();
         s2.Display();
 
-       
+        s3.Calculate();
+        s3.Display();
+
     }
 }
