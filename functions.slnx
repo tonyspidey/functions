@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="functions/functions.csproj" />
+  <Project Path="Inheritance/Inheritance.csproj" Id="ed47b89d-1459-4146-a6ef-f8c1b498f514" />
+  <Project Path="interface_pgm/interface_pgm.csproj" Id="ba90e22f-011b-455f-8583-44ed58695f89" />
   <Project Path="recursion/recursion.csproj" Id="42a79680-19f7-42f2-8b7d-a00889cf1b42" />
   <Project Path="static/Arrayandstatic.csproj" Id="bc94c9e2-1548-491b-9cbf-840cb19f769f" />
 </Solution>
