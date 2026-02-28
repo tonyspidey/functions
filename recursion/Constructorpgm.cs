@@ -3,9 +3,9 @@
 using System;
 class Student
 {
-    public string name;
-    public  int m1, m2, m3, m4, m5, total;
-    double avg;
+      string name;
+      int m1, m2, m3, m4, m5, total;
+      double avg;
 
     public Student()
     {
@@ -14,17 +14,15 @@ class Student
         total = 0;
         avg = 0;
     }
-
-    public Student(string n, int a, int b, int c, int d, int e)
+    public Student(string nam, int ma1, int ma2, int ma3, int ma4, int ma5)
     {
-        name = n;
-        m1 = a;
-        m2 = b;
-        m3 = c;
-        m4 = d;
-        m5 = e;
+        name = nam;
+        m1 = ma1;
+        m2 = ma2;
+        m3 = ma3;
+        m4 = ma4;
+        m5 = ma5;
     }
-
     public Student(Student s)
     {
         name = s.name;
@@ -33,18 +31,15 @@ class Student
         m3 = s.m3;
         m4 = s.m4;
         m5 = s.m5;
-        total = s.total;
-        avg = s.avg;
     }
-
-    public void SetData(string n,int a, int b, int c, int d, int e)
+    public void SetData(string nam, int ma1, int ma2, int ma3, int ma4, int ma5)
     {
-        name = n;
-        m1 = a;
-        m2 = b;
-        m3 = c;
-        m4 = d;
-        m5 = e;
+        name = nam;
+        m1 = ma1;
+        m2 = ma2;
+        m3 = ma3;
+        m4 = ma4;
+        m5 = ma5;
     }
 
     public void Calculate()
@@ -68,19 +63,26 @@ class Constructorpgm
         int m1, m2, m3, m4, m5;
 
         Student s1 = new Student();
+
         Student s2 = new Student("Adi", 60, 70, 80, 90, 99);
+
         Student s3 = new Student(s2);
 
         Console.WriteLine("Enter the name of the student:");
         name = Console.ReadLine();
+
         Console.WriteLine("enter the mark1:");
         m1 = Convert.ToInt32(Console.ReadLine());
+
         Console.WriteLine("enter the mark2:");
         m2 = Convert.ToInt32(Console.ReadLine());
+
         Console.WriteLine("enter the mark3:");
         m3 = Convert.ToInt32(Console.ReadLine());
+
         Console.WriteLine("enter the mark4:");
         m4 = Convert.ToInt32(Console.ReadLine());
+
         Console.WriteLine("enter the mark5:");
         m5 = Convert.ToInt32(Console.ReadLine());
 

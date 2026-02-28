@@ -3,9 +3,9 @@
 using System;
 class Product
 {
-    public string name;
-    public int code, quantity;
-    public double price, total, da, fp;
+     string name;
+     int code, quantity;
+     double price, total, da, fp;
 
     public Product()
     {
@@ -14,12 +14,12 @@ class Product
         price =  0;
     }
 
-    public Product(string n, int c, int q, double p)
+    public Product(string nam, int cod, int qua, double pr)
     {
-        name = n;
-        code = c;
-        quantity = q;
-        price = p;
+        name = nam;
+        code = cod;
+        quantity = qua;
+        price = pr;
     }
 
     public Product(Product p)
@@ -28,16 +28,13 @@ class Product
         code = p.code;
         quantity = p.quantity;
         price = p.price;
-        total = p.total;
-        da = p.da;
-        fp = p.fp;
     }
-    public void SetData(string n, int c, int q, double p)
+    public void SetData(string nam, int cod, int qua, double pr)
     {
-        name = n;
-        code = c;
-        quantity = q;
-        price = p;
+        name = nam;
+        code = cod;
+        quantity = qua;
+        price = pr;
     }
     public void Calculate()
     {
@@ -66,7 +63,9 @@ class ProductConstructor
         double price;
 
         Product p = new Product();
+
         Product p2 = new Product("Laptop", 102, 1, 10000);
+
         Product p3 = new Product(p2);
 
         Console.WriteLine("enter the product code :");
